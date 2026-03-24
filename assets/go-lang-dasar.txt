@@ -1,0 +1,1010 @@
+Go-Lang Dasar
+Eko Kurniawan Khannedy
+
+Eko Kurniawan Khannedy
+Technical architect at one of the biggest ecommerce company in Indonesia
+12+ years experiences
+www.programmerzamannow.com
+youtube.com/c/ProgrammerZamanNow
+
+Eko Kurniawan Khannedy
+Telegram : @khannedy
+Linkedin : https://www.linkedin.com/company/programmer-zaman-now/ 
+Facebook : fb.com/ProgrammerZamanNow
+Instagram : instagram.com/programmerzamannow
+Youtube : youtube.com/c/ProgrammerZamanNow
+Telegram Channel : t.me/ProgrammerZamanNow
+Tiktok : https://tiktok.com/@programmerzamannow 
+Email : echo.khannedy@gmail.com
+
+Sebelum Belajar
+Mengerti cara menggunakan komputer
+Mengerti cara menginstall aplikasi
+Mengerti cara menggunakan terminal/command prompt
+
+Pengenalan Go-Lang
+
+Sejarah Go-Lang
+Dibuat di Google menggunakan bahasa pemrograman C
+Di Rilis ke public sebagai open source pada tahun 2009
+Go-Lang populer sejak digunakan untuk membuat Docker pada tahun 2011 
+Saat ini mulai banyak teknologi baru yang dibuat menggunakan bahasa Go-Lang dibanding bahasa C, seperti Kubernetes, Prometheus, CockroachDB, dan lain-lain
+Saat ini mulai populer untuk pembuatan Backend API di Microservices
+
+Kenapa Belajar Go-Lang?
+Bahasa Go-Lang sangat sederhana, tidak butuh waktu lama untuk mempelajarinya
+Go-Lang mendukung baik concurrency programming, dimana saat ini kita hidup di zaman multicore processor
+Go-Lang mendukung garbage collector, sehingga tidak butuh melakukan management memory secara manual seperti di bahasa C
+Salah satu bahasa pemrograman yang sedang naik daun
+
+Proses Development Program Go-Lang
+http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9ApiyjoCzBpIjHK7BFLt06yZ9pKekK51AB5TBpkTA070MbtCJCFBtqVB0WI0H962oMb9cNM5J9nPMUhw2Rab-Ufskd05PX1JDFmGr884b3TG0L11JbfvGcfoeuWGKWwhWSKlDIG8u30000
+
+Menginstall Go-Lang
+
+Software Development Kit
+https://golang.org/
+Download Compiler Go-Lang
+Install Compiler Go-Lang
+Cek menggunakan perintah : go version
+
+Text Editor atau IDE
+Visual Studio Code
+JetBrains GoLand
+
+
+Membuat Project
+Project di Go-Lang, biasanya disebut sebagai module
+Untuk membuat module, kita bisa menggunakan perintah berikut di folder tempat kita akan membuat module :go mod init nama-module
+Fitur Go-Lang Modules sebenarnya masih banyak, namun akan kita bahas di kelas khusus membahas tentang Go-Lang Modules
+
+Kode : Membuat Module
+
+Program Hello World
+
+Main Function
+Go-Lang, itu mirip seperti bahasa pemrograman C/C++, dimana perlu ada yang namanya main function
+Main function adalah sebuah fungsi yang akan dijalankan ketika program berjalan
+Untuk membuat function, kita bisa menggunakan kata kunci func
+Main function harus terdapat didalam main package
+Titik koma di Golang, tidaklah wajib, artinya kita bisa menambahkan titik koma atau tidak, diakhir kode program kita
+
+Kode : Main Function
+
+Println
+Untuk menulis tulisan, kita perlu melakukan import module fmt terlebih dahulu 
+Mirip ketika kita belajar Java
+Materi tentang import, akan kita bahas di bagian tersendiri
+
+Program Hello World
+
+Kode : Kompilasi File Go-Lang
+
+Kode : Menjalankan Tanpa Kompilasi
+
+Multiple Main Function
+
+Multiple Main Function
+Di Golang, function dalam module / project adalah unik, artinya kita tidak boleh membuat nama function yang sama
+Oleh karena itu, jika kita membuat file baru, misal sample.go, lalu membuat nama function yang sama yaitu main
+Maka kita tidak bisa melakukan build module, karena main function tersebut duplikat dengan yang ada di main function helloworld.go
+
+Kode : Sample
+
+Kode : Compile Error
+
+Solusinya?
+Karena sekarang kita masih dalam fase belajar, oleh karena itu kita tidak akan melakukan build project module terlebih dahulu
+Sekarang kita akan fokus menjalankan file Golang satu persatu, sehingga tidak akan terjadi error jika dijalankan file nya satu persatu
+Tapi INGAT, pada kenyataannya nanti, saat kita membuat project, kita hanya akan membuat satu main function saja
+
+Kode : Menjalankan Golang
+
+Tipe Data Number
+
+Tipe Data Number
+Ada dua jenis tipe data Number, yaitu :
+Integer
+Floating Point
+
+Tipe Data Integer (1)
+Tipe Data
+Nilai Minimum
+Nilai Maksimum
+int8
+-128
+127
+int16
+-32768
+32767
+int32
+-2147483648
+2147483647
+int64
+-9223372036854775808
+9223372036854775807
+
+Tipe Data Integer (2)
+Tipe Data
+Nilai Minimum
+Nilai Maksimum
+uint8
+0
+255
+uint16
+0
+65535
+uint32
+0
+4294967295
+uint64
+0
+18446744073709551615
+
+Tipe Data Floating Point
+Tipe Data
+Nilai Minimum
+Nilai Maksimum
+float32
+1.18×10−38
+3.4×1038
+float64
+2.23×10−308
+1.80×10308
+complex64
+complex numbers with float32 real and imaginary parts.
+complex128
+complex numbers with float64 real and imaginary parts.
+
+Alias
+Tipe Data
+Alias untuk
+byte
+uint8
+rune
+int32
+int
+Minimal int32
+uint
+Minimal uint32
+
+Kode Program Number
+
+Tipe Data Boolean
+
+Tipe Data Boolean
+Tipe data boolean adalah tipe data yang memiliki nilai dua nilai, yaitu benar atau salah
+Di Go-Lang, tipe data boolean direpresentasikan menggunakan kata kunci bool
+
+Boolean
+Nilai Boolean
+Keterangan
+true
+Benar
+false
+Salah
+
+Kode Program Boolean
+
+Tipe Data String
+
+Tipe Data String
+String ada tipe data kumpulan karakter
+Jumlah karakter di dalam String bisa nol sampai tidak terhingga
+Tipe data String di Go-Lang direpresentasikan dengan kata kunci string
+Nilai data String di Go-Lang selalu diawali dengan karakter “ (petik dua) dan diakhiri dengan karakter “ (petik dua)
+
+Kode Program String
+
+Function untuk String
+Function
+Keterangan
+len(“string”)
+Menghitung jumlah karakter di String
+“string”[number]
+Mengambil karakter pada posisi yang ditentukan
+
+Kode Program String
+
+Variable
+
+Variable
+Variable adalah tempat untuk menyimpan data
+Variable digunakan agar kita bisa mengakses data yang sama dimanapun kita mau
+Di Go-Lang Variable hanya bisa menyimpan tipe data yang sama, jika kita ingin menyimpan data yang berbeda-beda jenis, kita harus membuat beberapa variable
+Untuk membuat variable, kita bisa menggunakan kata kunci var, lalu diikuti dengan nama variable dan tipe datanya
+
+Kode Program Variable
+
+Tipe Data Variable
+Saat kita membuat variable, maka kita wajib menyebutkan tipe data variable tersebut
+Namun jika kita langsung menginisialisasikan data pada variable nya, maka kita tidak wajib menyebutkan tipe data variable nya
+
+Kode Program Variable
+
+Kata Kunci Var
+Di Go-Lang, kata kunci var saat membuat variable tidak lah wajib. 
+Asalkan saat membuat variable kita langsung menginisialisasi datanya
+Agar tidak perlu menggunakan kata kunci var, kita perlu menggunakan kata kunci := saat menginisialisasikan data pada variable tersebut
+
+Kode Program Variable
+
+Deklarasi Multiple Variable
+Di Go-Lang kita bisa membuat variable secara sekaligus banyak
+Code yang dibuat akan lebih bagus dan mudah dibaca
+
+Kode Program Variable
+
+Constant
+
+Constant
+Constant adalah variable yang nilainya tidak bisa diubah lagi setelah pertama kali diberi nilai
+Cara pembuatan constant mirip dengan variable, yang membedakan hanya kata kunci yang digunakan adalah const, bukan var
+Saat pembuatan constant, kita wajib langsung menginisialisasikan datanya
+
+Kode Program Constant
+
+Deklarasi Multiple Constant
+Sama seperti variable, di Go-Lang  juga kita bisa membuat constant secara sekaligus banyak
+
+Kode Program Constant
+
+Konversi Tipe Data
+
+Konversi Tipe Data
+Di Go-Lang kadang kita butuh melakukan konversi tipe data dari satu tipe ke tipe lain
+Misal kita ingin mengkonversi tipe data int32 ke int63, dan lain-lain
+
+Kode Program Konversi Tipe Data (1)
+
+Kode Program Konversi Tipe Data (2)
+
+Type Declarations
+
+Type Declarations
+Type Declarations adalah kemampuan membuat ulang tipe data baru dari tipe data yang sudah ada
+Type Declarations biasanya digunakan untuk membuat alias terhadap tipe data yang sudah ada, dengan tujuan agar lebih mudah dimengerti
+
+Kode Program Type Declarations
+
+Operasi Matematika
+
+Operasi Matematika
+Operator
+Keterangan
++
+Penjumlahan
+- 
+Pengurangan
+*
+Perkalian
+/
+Pembagian
+%
+Sisa Pembagian
+
+Kode Program Operasi Matematika
+
+Augmented Assignments
+Operasi Matematika
+Augmented Assignments
+a = a + 10
+a += 10
+a = a - 10 
+a -= 10
+a = a * 10
+a *= 10
+a = a / 10
+a /= 10
+a = a % 10
+a %= 10
+
+Kode Program Augmented Assignments
+
+Unary Operator
+Operator
+Keterangan
+++
+a = a + 1
+--
+a = a - 1
+-
+Negative
++
+Positive
+!
+Boolean kebalikan
+
+Kode Program Unary Operator
+
+Operasi Perbandingan
+
+Operasi Perbandingan
+Operasi perbandingan adalah operasi untuk membandingkan dua buah data
+Operasi perbandingan adalah operasi yang menghasilkan nilai boolean (benar atau salah)
+Jika hasil operasinya adalah benar, maka nilainya adalah true
+Jika hasil operasinya adalah salah, maka nilainya adalah false
+
+Operator Perbandingan
+Operator
+Keterangan
+>
+Lebih Dari
+<
+Kurang Dari
+>=
+Lebih Dari Sama Dengan
+<= 
+Kurang Dari Sama Dengan
+==
+Sama Dengan
+!=
+Tidak Sama Dengan
+
+Kode Program Operasi Perbandingan
+
+Operasi Boolean
+
+Operasi Boolean
+Operator
+Keterangan
+&&
+Dan
+||
+Atau
+!
+Kebalikan
+
+Operasi &&
+Nilai 1
+Operator
+Nilai 2
+Hasil
+true
+&&
+true
+true
+true
+&&
+false
+false
+false
+&&
+true
+false
+false
+&&
+false
+false
+
+Operasi ||
+Nilai 1
+Operator
+Nilai 2
+Hasil
+true
+||
+true
+true
+true
+||
+false
+true
+false
+||
+true
+true
+false
+||
+false
+false
+
+Operasi !
+Operator
+Nilai 2
+Hasil
+!
+true
+false
+!
+false
+true
+
+Kode Program Operasi Boolean
+
+Tipe Data Array
+
+Tipe Data Array
+Array adalah tipe data yang berisikan kumpulan data dengan tipe yang sama
+Saat membuat array, kita perlu menentukan jumlah data yang bisa ditampung oleh Array tersebut
+Daya tampung Array tidak bisa bertambah setelah Array dibuat
+
+Index di Array
+Index
+Data
+0
+Eko
+1
+Kurniawan
+2
+Khannedy
+
+Kode Program Array
+
+Membuat Array Langsung
+Di Go-Lang kita juga bisa membuat Array secara langsung saat deklarasi variable
+
+Kode Program Array
+
+Function Array
+Operasi
+Keterangan
+len(array)
+Untuk mendapatkan panjang Array
+array[index]
+Mendapat data di posisi index
+array[index] = value
+Mengubah data di posisi index
+
+Kode Program Array
+
+Tipe Data Slice
+
+Tipe Data Slice
+Tipe data Slice adalah potongan dari data Array
+Slice mirip dengan Array, yang membedakan adalah ukuran Slice bisa berubah
+Slide dan Array selalu terkoneksi, dimana Slice adalah data yang mengakses sebagian atau seluruh data di Array
+
+Detail Tipe Data Slice
+Tipe Data Slice memiliki 3 data, yaitu pointer, length dan capacity
+Pointer adalah penunjuk data pertama di array para slice
+Length adalah panjang dari slice, dan
+Capacity adalah kapasitas dari slice, dimana length tidak boleh lebih dari capacity
+
+Membuat Slice Dari Array
+Membuat Slice
+Keterangan
+array[low:high]
+Membuat slice dari array dimulai index low sampai index sebelum high
+array[low:]
+Membuat slide dari array dimulai index low sampai index akhir di array
+array[:high]
+Membuat slice dari array dimulai index 0 sampai index sebelum high
+array[:]
+Membuat slice dari array dimulai index 0 sampai index akhir di array
+
+Slice dan Array
+http://www.plantuml.com/plantuml/uml/XP71IiD048Rl-nH3xm6JnhGDA2s81q45FOg7JPoagzlTC9a8HNntTzQrY1Pw_Fxz-9dPMO-iYQUTLSethzWoQ2AzXmy5S0ONCBlHRj9aPe5puMjiw2Se9BZLX2mq5zeCPAnG6TymUkUnQ78Hgc-m4HO2ctuQUHg5byAFE33k6YH9LfBSlx5FdCUfxlpxmSXpIQvmJCddOPNHcXRpk0l0u8rZfE2MaIswdhS1vn5RFUZMy3u4oxyLnR-AwaH59HNECmBx0NoNHb7nSv_AUl6iqBs064Uy8dbLlVhjfNKoClsMiyjqgHeUi4D2rw9AqsOMk-E2MeSwkVON
+
+Kode Program Slice
+
+Function Slice
+Operasi
+Keterangan
+len(slice)
+Untuk mendapatkan panjang 
+cap(slice)
+Untuk mendapat kapasitas 
+append(slice, data)
+Membuat slice baru dengan menambah data ke posisi terakhir slice, jika kapasitas sudah penuh, maka akan membuat array baru
+make([]TypeData, length, capacity)
+Membuat slice baru
+copy(destination, source)
+Menyalin slice dari source ke destination
+
+Kode Program Append Slice
+
+Kode Program Make Slice
+
+Kode Program Copy Slice
+
+Hati-Hati Saat Membuat Array
+Saat membuat Array, kita harus berhati-hati, jika salah, maka yang kita buat bukanlah Array, melainkan Slice
+
+Kode Program Array vs Slice
+
+Tipe Data Map
+
+Tipe Data Map
+Pada Array atau Slice, untuk mengakses data, kita menggunakan index Number dimulai dari 0
+Map adalah tipe data lain yang berisikan kumpulan data yang sama, namun kita bisa menentukan jenis tipe data index yang akan kita gunakan
+Sederhananya, Map adalah tipe data kumpulan key-value (kata kunci - nilai), dimana kata kuncinya bersifat unik, tidak boleh sama
+Berbeda dengan Array dan Slice, jumlah data yang kita masukkan ke dalam Map boleh sebanyak-banyaknya, asalkan kata kunci nya berbeda, jika kita gunakan kata kunci sama, maka secara otomatis data sebelumnya akan diganti dengan data baru
+
+Kode Program Map
+
+Function Map
+Operasi
+Keterangan
+len(map)
+Untuk mendapatkan jumlah data di map
+map[key]
+Mengambil data di map dengan key
+map[key] = value
+Mengubah data di map dengan key
+make(map[TypeKey]TypeValue)
+Membuat map baru
+delete(map, key)
+Menghapus data di map dengan key
+
+Kode Program Map
+
+If Expression
+
+If Expression
+If adalah salah satu kata kunci yang digunakan untuk percabangan
+Percabangan artinya kita bisa mengeksekusi kode program tertentu ketika suatu kondisi terpenuhi
+Hampir di semua bahasa pemrograman mendukung if expression
+
+Kode Program If
+
+Else Expression
+Blok if akan dieksekusi ketika kondisi if bernilai true
+Kadang kita ingin melakukan eksekusi program tertentu jika kondisi if bernilai false
+Hal ini bisa dilakukan menggunakan else expression
+
+Kode Program Else
+
+Else If Expression
+Kadang dalam If, kita butuh membuat beberapa kondisi
+Kasus seperti ini, kita bisa menggunakan Else If expression
+
+Kode Program If Else
+
+If dengan Short Statement
+If mendukung short statement sebelum kondisi
+Hal ini sangat cocok untuk membuat statement yang sederhana sebelum melakukan pengecekan terhadap kondisi
+
+Kode Program If Short Statement
+
+Switch Expression
+
+Switch Expression
+Selain if expression, untuk melakukan percabangan, kita juga bisa menggunakan Switch Expression
+Switch expression sangat sederhana dibandingkan if
+Biasanya switch  expression digunakan untuk melakukan pengecekan ke kondisi dalam satu variable
+
+Kode Program Switch
+
+Switch dengan Short Statement
+Sama dengan If, Switch juga mendukung short statement sebelum variable yang akan di cek kondisinya
+
+Kode Program Switch dengan Short Statement
+
+Switch Tanpa Kondisi
+Kondisi di switch expression tidak wajib
+Jika kita tidak menggunakan kondisi di switch expression, kita bisa menambahkan kondisi tersebut di setiap case nya
+
+Kode Program Switch Tanda Kondisi
+
+For Loops
+
+For 
+Dalam bahasa pemrograman, biasanya ada fitur yang bernama perulangan
+Salah satu fitur perulangan adalah for loops
+
+Kode Program For
+
+For dengan Statement
+Dalam for, kita bisa menambahkan statement, dimana terdapat 2 statement yang bisa tambahkan di for
+Init statement, yaitu statement sebelum for di eksekusi
+Post statement, yaitu statement yang akan selalu dieksekusi di akhir tiap perulangan
+
+Kode Program For dengan Statement
+
+For Range
+For bisa digunakan untuk melakukan iterasi terhadap semua data collection
+Data collection contohnya Array, Slice dan Map
+
+Kode Program For Range
+
+Break & Continue
+
+Break & continue adalah kata kunci yang bisa digunakan dalam perulangan 
+Break digunakan untuk menghentikan seluruh perulangan
+Continue adalah digunakan untuk menghentikan perulangan yang berjalan, dan langsung melanjutkan ke perulangan selanjutnya
+Break & Continue
+
+Kode Program Break
+
+Kode Program Continue
+
+Function
+
+Function
+Sebelumnya kita sudah mengenal sebuah function yang wajib dibuat agar program kita bisa berjalan, yaitu function main
+Function adalah sebuah blok kode yang sengaja dibuat dalam program agar bisa digunakan berulang-ulang
+Cara membuat function sangat sederhana, hanya dengan menggunakan kata kunci func lalu diikuti dengan nama function nya dan blok kode isi function nya
+Setelah membuat function, kita bisa mengeksekusi function tersebut dengan memanggilnya menggunakan kata kunci nama function nya diikuti tanda kurung buka, kurung tutup
+
+Kode Program Function
+
+Function Parameter
+
+Function Parameter
+Saat membuat function, kadang-kadang kita membutuhkan data dari luar, atau kita sebut parameter.
+Kita bisa menambahkan parameter di function, bisa lebih dari satu
+Parameter tidaklah wajib, jadi kita bisa membuat function tanpa parameter seperti sebelumnya yang sudah kita buat
+Namun jika kita menambahkan parameter di function, maka ketika memanggil function tersebut, kita wajib memasukkan data ke parameternya
+
+Kode Program Function Parameter
+
+Function Return Value
+
+Function Return Value
+Function bisa mengembalikan data
+Untuk memberitahu bahwa function mengembalikan data, kita harus menuliskan tipe data kembalian dari function tersebut
+Jika function tersebut kita deklarasikan dengan tipe data pengembalian, maka wajib di dalam function nya kita harus mengembalikan data
+Untuk mengembalikan data dari function, kita bisa menggunakan kata kunci return, diikuti dengan datanya
+
+Kode Program Function Return Value
+
+Returning Multiple Values
+
+Returning Multiple Values
+Function tidak hanya dapat mengembalikan satu value, tapi juga bisa multiple value
+Untuk memberitahu jika function mengembalikan multiple value, kita harus menulis semua tipe data return value nya di function
+
+Kode Program Returning Multiple Values
+
+Menghiraukan Return Value
+Multiple return value wajib ditangkap semua value nya
+Jika kita ingin menghiraukan return value tersebut, kita bisa menggunakan tanda _ (garis bawah)
+
+Kode Program Menghiraukan Return Value
+
+Named Return Values
+
+Named Return Values
+Biasanya saat kita memberi tahu bahwa sebuah function mengembalikan value, maka kita hanya mendeklarasikan tipe data return value di function
+Namun kita juga bisa membuat variable secara langsung di tipe data return function nya
+
+Kode Program Named Return Values
+
+Variadic Function
+
+Variadic Function
+Parameter yang berada di posisi terakhir, memiliki kemampuan dijadikan sebuah varargs
+Varargs artinya datanya bisa menerima lebih dari satu input, atau anggap saja semacam Array.
+Apa bedanya dengan parameter biasa dengan tipe data Array?
+Jika parameter tipe Array, kita wajib membuat array terlebih dahulu sebelum mengirimkan ke function
+JIka parameter menggunakan varargs, kita bisa langsung mengirim data nya, jika lebih dari satu, cukup gunakan tanda koma
+
+Kode Program Variadic Function
+
+Slice Parameter
+Kadang ada kasus dimana kita menggunakan Variadic Function, namun memiliki variable berupa slice
+Kita bisa menjadikan slice sebagai vararg parameter
+
+Kode Program Slice Parameter
+
+Function Value
+
+Function Value
+Function adalah first class citizen
+Function juga merupakan tipe data, dan bisa disimpan di dalam variable
+
+Kode Program Function Value
+
+Function as Parameter
+
+Function as Parameter
+Function tidak hanya bisa kita simpan di dalam variable sebagai value
+Namun juga bisa kita gunakan sebagai parameter untuk function lain
+
+Kode Program Function as Parameter (1)
+
+Kode Program Function as Parameter (2)
+
+Function Type Declarations
+Kadang jika function terlalu panjang, agak ribet untuk menuliskannya di dalam parameter
+Type Declarations juga bisa digunakan untuk membuat alias function, sehingga akan mempermudah kita menggunakan function sebagai parameter
+
+Kode Program Function Type Declarations
+
+Anonymous Function
+
+Anonymous Function
+Sebelumnya setiap membuat function, kita akan selalu memberikan sebuah nama pada function tersebut
+Namun kadang ada kalanya lebih mudah membuat function secara langsung di variable atau parameter tanpa harus membuat function terlebih dahulu
+Hal tersebut dinamakan anonymous function, atau function tanpa nama
+
+Kode Program Anonymous Function (1)
+
+Kode Program Anonymous Function (2)
+
+Recursive Function
+
+Recursive Function
+Recursive function adalah function yang memanggil function dirinya sendiri
+Kadang dalam pekerjaan, kita sering menemui kasus dimana menggunakan recursive function lebih mudah dibandingkan tidak menggunakan recursive function
+Contoh kasus yang lebih mudah diselesaikan menggunakan recursive adalah Factorial
+
+Kode Program Factorial For Loop
+
+Kode Program Factorial Recursive
+
+Closure
+
+Closures
+Closure adalah kemampuan sebuah function berinteraksi dengan data-data disekitarnya dalam scope yang sama
+Harap gunakan fitur closure ini dengan bijak saat kita membuat aplikasi
+
+Kode Program Function
+
+Defer, Panic dan Recover
+
+Defer
+Defer function adalah function yang bisa kita jadwalkan untuk dieksekusi setelah sebuah function selesai di eksekusi
+Defer function akan selalu dieksekusi walaupun terjadi error di function yang dieksekusi
+
+Kode Program Defer
+
+Panic
+Panic function adalah function yang bisa kita gunakan untuk menghentikan program
+Panic function biasanya dipanggil ketika terjadi panic pada saat program kita berjalan
+Saat panic function dipanggil, program akan terhenti, namun defer function tetap akan dieksekusi
+
+Kode Program Panic
+
+Recover
+Recover adalah function yang bisa kita gunakan untuk menangkap data panic
+Dengan recover proses panic akan terhenti, sehingga program akan tetap berjalan
+
+Kode Program Recover Salah
+
+Kode Program Recover Benar
+
+Komentar
+
+Komentar
+Komentar terbaik pada kode adalah kode itu sendiri
+Saat membuat kode, kita perlu membuat kode semudah mungkin untuk dibaca
+Namun kadang juga kita butuh menambahkan komentar di kode kita
+
+Kode Program Komentar
+
+Struct
+
+Struct
+Struct adalah sebuah template data yang digunakan untuk menggabungkan nol atau lebih tipe data lainnya dalam satu kesatuan
+Struct biasanya representasi data dalam program aplikasi yang kita buat
+Data di struct disimpan dalam field  
+Sederhananya struct adalah kumpulan dari field
+
+Kode Program Struct
+
+Membuat Data Struct
+Struct adalah template data atau prototype data
+Struct tidak bisa langsung digunakan
+Namun kita bisa membuat data/object dari struct yang telah kita buat
+
+Kode Program Membuat Data Struct
+
+Struct Literals
+Sebelumnya kita telah membuat data dari struct, namun sebenarnya ada banyak cara yang bisa kita gunakan untuk membuat data dari struct
+
+Kode Program Struct Literals
+
+Struct Method
+
+Struct Method
+Struct adalah tipe data seperti tipe data lainnya, dia bisa digunakan sebagai parameter untuk function
+Namun jika kita ingin menambahkan method ke dalam structs, sehingga seakan-akan sebuah struct memiliki function
+Method adalah function
+
+Kode Program Struct Method
+
+Interface
+
+Interface
+Interface adalah tipe data Abstract, dia tidak memiliki implementasi langsung
+Sebuah interface berisikan definisi-definisi method
+Biasanya interface digunakan sebagai kontrak 
+
+Kode Program Interface
+
+Implementasi Interface
+Setiap tipe data yang sesuai dengan kontrak interface, secara otomatis dianggap sebagai interface tersebut
+Sehingga kita tidak perlu mengimplementasikan interface secara manual
+Hal ini agak berbeda dengan bahasa pemrograman lain yang ketika membuat interface, kita harus menyebutkan secara eksplisit akan menggunakan interface mana
+
+Kode Program Implementasi Interface (1)
+
+Kode Program Implementasi Interface (2)
+
+Interface Kosong
+
+Interface Kosong
+Go-Lang bukanlah bahasa pemrograman yang berorientasi objek
+Biasanya dalam pemrograman berorientasi objek, ada satu data parent di puncak yang bisa dianggap sebagai semua implementasi data yang ada di bahasa pemrograman tersebut
+Contoh di Java ada java.lang.Object
+Untuk menangani kasus seperti ini, di Go-Lang kita bisa menggunakan interface kosong
+Interface kosong adalah interface yang tidak memiliki deklarasi method satupun, hal ini membuat secara otomatis semua tipe data akan menjadi implementasi nya
+Interface kosong, juga memiliki type alias bernama any
+
+Penggunaan Interface Kosong di Go-Lang
+Ada banyak contoh penggunaan interface kosong di Go-Lang, seperti :
+fmt.Println(a ...interface{})
+panic(v interface{})
+recover() interface{}
+dan lain-lain
+
+Kode Program Interface Kosong
+
+Nil
+
+Nil
+Biasanya di dalam bahasa pemrograman lain, object yang belum diinisialisasi maka secara otomatis nilainya adalah null atau nil
+Berbeda dengan Go-Lang, di Go-Lang saat kita buat variable dengan tipe data tertentu, maka secara otomatis akan dibuatkan default value nya
+Namun di Go-Lang ada data nil, yaitu data kosong
+Nil sendiri hanya bisa digunakan di beberapa tipe data, seperti interface, function, map, slice, pointer dan channel
+
+Kode Program Nil (1)
+
+Kode Program Nil (2)
+
+Type Assertions
+
+Type Assertions
+Type Assertions merupakan kemampuan merubah tipe data menjadi tipe data yang diinginkan
+Fitur ini sering sekali digunakan ketika kita bertemu dengan data interface kosong
+
+Kode Program Type Assertions
+
+Type Assertions Menggunakan Switch
+Saat salah menggunakan type assertions, maka bisa berakibat terjadi panic di aplikasi kita
+Jika panic dan tidak ter-recover, maka otomatis program kita akan mati
+Agar lebih aman, sebaiknya kita menggunakan switch expression untuk melakukan type assertions
+
+Kode Program Type Assertions Switch
+
+Pointer
+
+Pass by Value
+Secara default di Go-Lang semua variable itu di passing by value, bukan by reference
+Artinya, jika kita mengirim sebuah variable ke dalam function, method atau variable lain, sebenarnya yang dikirim adalah duplikasi value nya
+
+Kode Program Pass by Value
+
+Penjelasan Detail Pass by Value
+http://www.plantuml.com/plantuml/uml/jP71IWCn48RlynH3xZrqZuBIrPE28FW4qysqZcGpPP9OY_ZkPcMZk-3L_vJy7ny_8RkKoN8P0r08UXxbNU8HuA31iw5xv57jul03i4RthpnaxBqtJcaxjNFk95_m6f_BdghUsYVJDua3L_90Py9RCig_ZfQORTBkezV8IUYRVS8VOzs_ZTMvWmH6H_Ep75B2TbcpRiawW7R2JJbjRh1leDdhVWlzJszoVCaB1Qzmq9Em1zXnzDE7V040
+
+Pointer
+Pointer adalah kemampuan membuat reference ke lokasi data di memory yang sama, tanpa menduplikasi data yang sudah ada
+Sederhananya, dengan kemampuan pointer, kita bisa membuat pass by reference
+
+Pass by Reference dengan Pointer
+http://www.plantuml.com/plantuml/uml/NO_B2i8m44NtynL3zbsqUwNgIa4G_89fCqeaJIGFQv7-kwaqFhohv1mkkQbz81TYfu6qjdsdxigS0KvMItOezjnPDmXy0AROvi9jm9MKZhql9pfdeyA02pp6Xb8zquEpDsLQJcP7FU6Q78LFnqOJt5JR6caDUqKlDyAO1YZDA6X-II1vp9TVLtsx2Y2Vi8ZNOldUcddvpw5c8wV_Fm40
+
+Operator &
+Untuk membuat sebuah variable dengan nilai pointer ke variable yang lain, kita bisa menggunakan operator & diikuti dengan nama variable nya
+
+Kode Program Operator &
+
+Asterisk Operator
+
+Operator *
+Saat kita mengubah variable pointer, maka yang berubah hanya variable tersebut.
+Semua variable yang mengacu ke data yang sama tidak akan berubah
+Jika kita ingin mengubah seluruh variable yang mengacu ke data tersebut, kita bisa menggunakan operator *
+
+Variable Pointer Mengacu Ke Data yang Sama
+http://www.plantuml.com/plantuml/uml/NO_B2i8m44NtynL3zbsqUwNgIa4G_89fCqeaJIGFQv7-kwaqFhohv1mkkQbz81TYfu6qjdsdxigS0KvMItOezjnPDmXy0AROvi9jm9MKZhql9pfdeyA02pp6Xb8zquEpDsLQJcP7FU6Q78LFnqOJt5JR6caDUqKlDyAO1YZDA6X-II1vp9TVLtsx2Y2Vi8ZNOldUcddvpw5c8wV_Fm40
+
+Kode Program Operator * (1)
+
+Tanpa Operator *
+http://www.plantuml.com/plantuml/uml/ZP31IiKm44NtynL3zc_nkbTQTTEA8FW5qsQKQ9h89B4MwR-RIeCMktYpIkxXSfYfGoI9QRH0rlffD9_6lG0yUwjPK3tmw6LM-0MOn_UlF4Hij1OEuRocszoQEECLFgMUShsaZ-8_Z1iuauucmXiIYhyTdroKjTOwxHq7GpziEN1L_rqTlP54EfBTtRS5Ns1Ryhh6CYhQzb980Sjdpwg_h08eBpobzzCrDWMKzZu_0zJiz7hjRm00
+
+Kode Program Operator * (2)
+
+Dengan Operator *
+http://www.plantuml.com/plantuml/uml/XP3DJeKm48NtynIJxbd8NeC_6p0c9Zx1G0TIBQsPjY8nlBjW0FLUaZkhzdmv-TefGYI9gRT0rlgXDv_6TG2jjve5rHFtNaQ5Nu3p-FgLcuYtMWk7SBMcozoREE8rlgIQNBUdp-8_Z6ju9XKDX7Sa57yxFhaeIwrqsZiEXdxOTE3AprqLlP54Ef8zF9OxlcoR05fZ6HMj_r980RVBVvR_PJd0Ti8ilMSt-sjXQv_cKB3JoxQ_0G00
+
+Operator New
+
+Operator new
+Sebelumnya untuk membuat pointer dengan menggunakan operator &
+Go-Lang juga memiliki function new yang bisa digunakan untuk membuat pointer
+Namun function new hanya mengembalikan pointer ke data kosong, artinya tidak ada data awal
+
+Kode Program Function new
+
+Pointer di Function 
+
+Pointer di Function
+Saat kita membuat parameter di function, secara default adalah pass by value, artinya data akan di copy lalu dikirim ke function tersebut
+Oleh karena itu, jika kita mengubah data di dalam function, data yang aslinya tidak akan pernah berubah. 
+Hal ini membuat variable menjadi aman, karena tidak akan bisa diubah
+Namun kadang kita ingin membuat function yang bisa mengubah data asli parameter tersebut
+Untuk melakukan ini, kita juga bisa menggunakan pointer di function
+Untuk menjadikan sebuah parameter sebagai pointer, kita bisa menggunakan operator * di parameternya
+
+Kode Program Pointer di Function (1)
+
+Kode Program Pointer di Function (2)
+
+Pointer di Method 
+
+Pointer di Method
+Walaupun method akan menempel di struct, tapi sebenarnya data struct yang diakses di dalam method adalah pass by value
+Sangat direkomendasikan menggunakan pointer di method, sehingga tidak boros memory karena harus selalu diduplikasi ketika memanggil method
+
+Kode Program Pointer di Method (1)
+
+Kode Program Pointer di Method (2)
+
+Package & Import
+
+Package
+Package adalah tempat yang bisa digunakan untuk mengorganisir kode program yang kita buat di Go-Lang
+Dengan menggunakan package, kita bisa merapikan kode program yang kita buat
+Package sendiri sebenarnya hanya direktori folder di sistem operasi kita
+
+Kode Program Package
+
+Import
+Secara standar, file Go-Lang hanya bisa mengakses file Go-Lang lainnya yang berada dalam package yang sama
+Jika kita ingin mengakses file Go-Lang yang berada diluar package, maka kita bisa menggunakan Import
+
+Kode Program Import
+
+Access Modifier
+
+Access Modifier
+Di bahasa pemrograman lain, biasanya ada kata kunci yang bisa digunakan untuk menentukan access modifier terhadap suatu function atau variable
+Di Go-Lang, untuk menentukan access modifier, cukup dengan nama function atau variable
+Jika nama nya diawali dengan hurup besar, maka artinya bisa diakses dari package lain, jika dimulai dengan hurup kecil, artinya tidak bisa diakses dari package lain
+
+Kode Program Access Modifier
+
+Package Initialization
+
+Package Initialization
+Saat kita membuat package, kita bisa membuat sebuah function yang akan diakses ketika package kita diakses
+Ini sangat cocok ketika contohnya, jika package kita berisi function-function untuk berkomunikasi dengan database, kita membuat function inisialisasi untuk membuka koneksi ke database
+Untuk membuat function yang diakses secara otomatis ketika package diakses, kita cukup membuat function dengan nama init
+
+Kode Program Package Initialization (1)
+
+Kode Program Package Initialization (2)
+
+Blank Identifier
+Kadang kita hanya ingin menjalankan init function di package tanpa harus mengeksekusi salah satu function yang ada di package
+Secara default, Go-Lang akan komplen ketika ada package yang di import namun tidak digunakan
+Untuk menangani hal tersebut, kita bisa menggunakan blank identifier (_) sebelum nama package ketika melakukan import
+
+Error
+
+error Interface
+Go-Lang memiliki interface yang digunakan sebagai kontrak untuk membuat error, nama interface nya adalah error
+
+Membuat Error
+Untuk membuat error, kita tidak perlu manual.
+Go-Lang sudah menyediakan library untuk membuat helper secara mudah, yang terdapat di package errors (Package akan kita bahas secara detail di materi tersendiri)
+
+Kode Program error Interface (1)
+
+Kode Program error Interface (2)
+
+Membuat Custom Error
+
+Membuat Custom Error
+Karena error adalah sebuah interface, jadi jika kita ingin membuat error sendiri, kita bisa membuat struct yang mengikuti kontrak dari interface error
+
+Kode : Custom Error
+
+Kode : Menggunakan Custom Error
+
+Kode : Mengecek Jenis Error
+
+Materi Selanjutnya
+
+Materi Selanjutnya
+Go-Lang Standard Library
+Go-Lang Modules
+Go-Lang Unit Test
+Go-Lang Goroutine
+Go-Lang Database
+Go-Lang Web
