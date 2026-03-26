@@ -177,6 +177,7 @@ Tipe data boolean adalah tipe data yang memiliki nilai dua nilai, yaitu benar at
 Di Go-Lang, tipe data boolean direpresentasikan menggunakan kata kunci bool
 
 Boolean
+
 Nilai Boolean
 Keterangan
 true
@@ -197,6 +198,7 @@ Nilai data String di Go-Lang selalu diawali dengan karakter “ (petik dua) dan 
 Kode Program String
 
 Function untuk String
+
 Function
 Keterangan
 len(“string”)
