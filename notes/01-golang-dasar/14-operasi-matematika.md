@@ -40,12 +40,4 @@ func main() {
 }
 ```
 
-| Operator | Keterangan        |
-| -------- | ----------------- |
-| ++       | a = a + 1         |
-| --       | a = a - 1         |
-| -        | Negative          |
-| +        | Positive          |
-| !        | Boolean kebalikan |
-
 Next: [Operasi perbandingan](./15-operasi-perbandingan.md)
