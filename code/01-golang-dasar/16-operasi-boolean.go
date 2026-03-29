@@ -11,5 +11,5 @@ func main() {
 
 	var lulus bool = lulusNilaiAkhir && lulusAbsensi
 
-	fmt.Println(lulus)
+	fmt.Println(lulus) // false
 }
