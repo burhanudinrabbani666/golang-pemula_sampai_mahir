@@ -32,4 +32,14 @@ func main() {
 
 	// ------------------
 
+	length := len(name)
+
+	switch {
+	case length > 10:
+		fmt.Println("nama terlau panjang")
+	case length > 5:
+		fmt.Println("nama lumayan panjang")
+	default:
+		fmt.Println("Nam sudah benar")
+	}
 }
