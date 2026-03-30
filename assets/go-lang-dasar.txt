@@ -425,10 +425,10 @@ Index di Array
 Index
 Data
 0
-Eko
 1
-Kurniawan
 2
+Eko
+Kurniawan
 Khannedy
 
 Kode Program Array
