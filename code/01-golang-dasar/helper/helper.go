@@ -1,4 +1,4 @@
-package helper
+// package helper
 
 var version = "1.0.0"
 var Application = "golang"
